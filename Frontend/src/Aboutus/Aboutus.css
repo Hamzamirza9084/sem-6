@@ -1,0 +1,139 @@
+
+.aboutus-container {
+    background: #27391C;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.aboutus-bg {
+    background: #18230F;
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 200px;
+    position: relative;
+    opacity: 1;
+}
+
+  .aboutus-bg::before {
+    content: "";
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+
+
+.aboutus-text {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.9;
+}
+
+.features-list {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    padding-left: 0;
+}
+
+.features-list li {
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: rgba(28, 28, 28, 0.2);
+    margin-bottom: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out;
+}
+
+.features-list li:hover {
+    transform: translateX(5px);
+    background: rgba(28, 28, 28, 0.3);
+}
+
+.btn-primary {
+    padding: 14px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    background:   #18230F;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px #000000;
+}
+
+
+.btn-primary:hover {
+    background:   #18230F;
+    color: #d9d9d9;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px #000000;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus-container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .aboutus-text, .features-list li {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,136 @@
+/* Define Custom Colors */
+:root {
+    --primary: #1F7D53;
+    --secondary: #255F38;
+    --dark: #27391C;
+    --darker: #18230F;
+    --text-light: #ffffff;
+  }
+  
+  /* Container */
+  .faculty-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .faculty-header {
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Search & Filter Section */
+  .search-bar-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--darker);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary);
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--dark);
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .search-icon {
+    margin-left: 10px;
+    color: var(--primary);
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--dark);
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Dropdown Filters */
+  .filter-select {
+    background-color: var(--dark);
+    color: var(--text-light);
+    border: 1px solid var(--secondary);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .filter-select:hover {
+    background-color: var(--secondary);
+  }
+  
+  .filter-select:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  /* Table */
+  .table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--darker);
+    color: var(--text-light);
+    margin-top: 20px;
+  }
+  
+  .table-custom th {
+    background-color: var(--dark);
+    color: var(--text-light);
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    text-align: left;
+  }
+  
+  .table-custom td {
+    padding: 10px;
+    border: 1px solid var(--secondary);
+  }
+  
+  .table-custom tbody tr:hover {
+    background-color: var(--dark);
+  }
+  
+  /* Loading and Error Messages */
+  .loading-message {
+    color: var(--primary);
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .search-bar-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-bar,
+    .filter-select {
+      width: 100%;
+    }
+  }
+  

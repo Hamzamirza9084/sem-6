@@ -1,0 +1,134 @@
+@font-face {
+    font-family: monospace;
+    src: url('../assets/fonts/monospace.woff2') format('woff2'),
+         url('../assets/fonts/monospace.woff') format('woff'),
+         url('../assets/fonts/monospace.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  :root {
+    --primary: #255F38;
+    --secondary: #1F7D53;
+    --background: #18230F;
+    --accent: #27391C;
+    --text-light: #FFFFFF;
+  }
+  
+  #head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    padding: 15px 50px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  #landh5 {
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    animation: scaleUp 1.2s ease-in-out;
+    
+  }
+  
+  h2 {
+    font-family: monospace;
+    font-size: 1.8rem;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-family: monospace;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    color: black;
+  }
+  
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .user-icon {
+    color: var(--text-light);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .user-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    z-index: 3;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 5px 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

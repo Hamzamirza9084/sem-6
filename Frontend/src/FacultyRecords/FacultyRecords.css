@@ -1,0 +1,88 @@
+:root {
+    --primary: #1F7D53;
+    --secondary: #255F38;
+    --dark: #27391C;
+    --darker: #18230F;
+    --text-light: #ffffff;
+    --border-color: #1f7d53;
+  }
+  
+  .faculty-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .faculty-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 20px;
+  }
+  
+  .faculty-card {
+    background: var(--dark);
+    color: var(--text-light);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .faculty-id {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .faculty-icon {
+    color: var(--primary);
+    font-size: 1.5rem;
+  }
+  
+  .faculty-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .faculty-table th,
+  .faculty-table td {
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .faculty-table th {
+    background-color: var(--secondary);
+    color: var(--text-light);
+  }
+  
+  .faculty-table tr:nth-child(even) {
+    background-color: var(--darker);
+  }
+  
+  .loading-text {
+    color: var(--primary);
+    font-size: 1.2rem;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 1.2rem;
+  }
+  
+  .no-data,
+  .no-records {
+    color: gray;
+    font-size: 1rem;
+  }
+  

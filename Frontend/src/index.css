@@ -1,0 +1,39 @@
+@font-face {
+  font-family: monospace;
+  src: url('./assets/fonts/monospace.woff2') format('woff2'),
+       url('./assets/fonts/monospace.woff') format('woff'),
+       url('./assets/fonts/monospace.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #255F38;
+  --secondary: #1F7D53;
+  --background: #18230F;
+  --accent: #27391C;
+  --text-light: #FFFFFF;
+}
+
+body {
+  font-family: monospace;
+  background-color: var(--background);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+p{
+  color: #FFFFFF;
+}

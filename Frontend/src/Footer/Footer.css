@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 15px 50px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@font-face {
+  font-family: monospace;
+  src: url('../assets/fonts/monospace.woff2') format('woff2'),
+       url('../assets/fonts/monospace.woff') format('woff'),
+       url('../assets/fonts/monospace.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #1A3C40;
+  --secondary: #70A288;
+  --background: #0B2027;
+ 
+  --text-light: #D8F3DC;
+}
