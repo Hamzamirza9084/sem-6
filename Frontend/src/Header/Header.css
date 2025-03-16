@@ -131,4 +131,32 @@
       opacity: 1;
     }
   }
+  @media (max-width: 768px) {
+    #head {
+      flex-direction: column;
+      padding: 10px 20px;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    #logo {
+      width: 40px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .dropdown-content {
+      top: 30px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   

@@ -139,6 +139,7 @@ const RegisterF = () => {
           <button type="submit" className="faculty-submit-btn">Register</button>
         </form>
       </div>
+      
     </div>
     </>
   );

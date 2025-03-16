@@ -85,4 +85,46 @@
     color: gray;
     font-size: 1rem;
   }
+  @media (max-width: 768px) {
+    .faculty-container {
+      padding: 15px;
+    }
+  
+    .faculty-title {
+      font-size: 1.8rem;
+    }
+  
+    .faculty-card {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  
+    .faculty-id {
+      font-size: 1rem;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .faculty-icon {
+      font-size: 1.3rem;
+    }
+  
+    .faculty-table {
+      font-size: 0.9rem;
+      overflow-x: auto;
+      display: block;
+    }
+  
+    .faculty-table th,
+    .faculty-table td {
+      padding: 6px;
+    }
+  
+    .loading-text,
+    .error-text,
+    .no-data,
+    .no-records {
+      font-size: 1rem;
+    }
+  }
   

@@ -122,15 +122,45 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .search-bar-container {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .search-bar,
-    .filter-select {
-      width: 100%;
-    }
+  /* Responsive Table for Mobile */
+@media (max-width: 768px) {
+  .table-custom {
+    
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-direction: column;
+        align-items: center;
+        justify-content: center;
   }
-  
+
+  .table-custom thead {
+    display: none; /* Hide table headers */
+  }
+
+  .table-custom tbody tr {
+    display: block;
+    border: 1px solid var(--secondary);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--darker);
+  }
+
+  .table-custom tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    border: none;
+  }
+
+  .table-custom tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--primary);
+  }
+
+  .faculty-header {
+    font-size: 20px;
+    text-align: center;
+  }
+}

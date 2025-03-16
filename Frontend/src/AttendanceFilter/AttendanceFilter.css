@@ -96,3 +96,46 @@
     display: flex;
     justify-content: center;
   }
+  @media only screen and (max-width: 768px) {
+    .attendance-container {
+      width: 95%;
+      max-width: 100%;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .search-btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .table-container {
+      padding: 5px;
+      overflow-x: auto;
+    }
+  
+    .attendance-table th,
+    .attendance-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    #smain {
+      min-height: 300px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

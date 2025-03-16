@@ -8,6 +8,7 @@ import { IoLogOutSharp } from "react-icons/io5";
 import { IoHome } from "react-icons/io5";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
+import { PiSecurityCamera } from "react-icons/pi";
 
 function Headerh() {
     const [user, setUser] = useState(null);
@@ -54,7 +55,8 @@ function Headerh() {
                     <li><Link to="/homeh"><IoHome /> Home</Link></li>
                     <li><Link to="/hodf"><FaChalkboardTeacher /> Faculty</Link></li>
                     
-                    <li><Link to="/s"><PiStudentFill />Student Search</Link></li>
+                    <li><Link to="/s"><PiStudentFill />Student</Link></li>
+                    <li><Link to="/starth"><PiSecurityCamera /> Start</Link></li>
 
                     <div className="dropdown">
                         <FaUser size="30px" className="user-icon" />

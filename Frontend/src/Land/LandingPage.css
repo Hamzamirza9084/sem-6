@@ -64,3 +64,20 @@
 .tech-container .fs-1 {
   color: var(--text-light);
 }
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .features-container,
+  .tech-container,
+  .cta-container {
+    padding: 40px 15px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

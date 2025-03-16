@@ -12,7 +12,9 @@ import ContactUs from './ContactUs/ContactUs.jsx';
 import Route from './Route/Route.jsx'
 import Routel from './Route/Routel.jsx'
 import Start from './Start/Start.jsx'
+import Starth from './Start/Starth.jsx'
 import AttendanceFilter from './AttendanceFilter/AttendanceFilter.jsx'
+import AttendanceFilterh from './AttendanceFilter/AttendanceFilterh.jsx'
 import FacultyDashboard from './FacultyDashboard/FacultyDashboard.jsx'
 import Home from './Home/Home.jsx'
 import Studentfilter from './Studentfilter/Studentfilter.jsx'
@@ -92,7 +94,15 @@ function App() {
     element: <Start/>
   },
   {
+    path:'/starth',
+    element: <Starth/>
+  },
+  {
     path:'/s',
+    element: <AttendanceFilterh/>
+  },
+  {
+    path:'/sf',
     element: <AttendanceFilter/>
   },
   {

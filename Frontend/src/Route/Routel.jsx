@@ -1,6 +1,6 @@
 import "./Route.css";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaUserGraduate, FaChalkboardTeacher, FaUserTie, FaUser } from "react-icons/fa";
 
 const roles = [
@@ -24,6 +24,7 @@ function Routel() {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
       <div className="container-box">
+      <h2>Login</h2>
         <h3 className="mb-3">Please select your role</h3>
         <p>Choose your role to proceed further.</p>
 
@@ -43,7 +44,11 @@ function Routel() {
         <button className="btn btn-custom mt-4" onClick={handleContinue} disabled={!selectedRole}>
           Continue
         </button>
+      
+        <p ><Link to='/signup' id='linkbro'>Sign Up</Link></p>
+      <p ><Link to='/' id='linkbro'>Home</Link></p>
       </div>
+      
     </div>
   );
 }

@@ -49,3 +49,20 @@
     background-color: #255F38;
     cursor: not-allowed;
 }
+@media (max-width: 768px) {
+    .containerr {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .input-box {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .start-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

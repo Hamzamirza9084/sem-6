@@ -1,7 +1,8 @@
 import "./Route.css";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { FaUserGraduate, FaChalkboardTeacher, FaUserTie, FaUser } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 const roles = [
   { name: "Student", icon: <FaUserGraduate />, path: "/regst" },
@@ -23,6 +24,7 @@ function Route() {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
       <div className="container-box">
+        <h2>Sign Up</h2>
         <h3 className="mb-3">Please select your role</h3>
         <p>Choose your role to proceed further.</p>
 
@@ -42,6 +44,7 @@ function Route() {
         <button className="btn btn-custom mt-4" onClick={handleContinue} disabled={!selectedRole}>
           Continue
         </button>
+        <p><Link to='/login' id='linkbro'>Login</Link></p>
       </div>
     </div>
   );

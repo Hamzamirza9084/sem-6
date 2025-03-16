@@ -141,6 +141,7 @@ const LoginF = () => {
 
           <button type="submit" className="submit-btn">Login</button>
         </form>
+        <p ><Link to='/regf' id='linkbro'>Sign Up</Link></p>
       </div>
     </div>
     </>

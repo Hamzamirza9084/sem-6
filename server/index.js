@@ -16,12 +16,9 @@ app.use(cors({
 app.use(cookieParser())
 app.use('/auth',UserRouter)
 
-mongoose.connect("mongodb+srv://hamzamirza9084:surge7698302331@cluster0.ixn2m.mongodb.net/attendance_db")
+mongoose.connect(process.env.MURL)
 
-app.get("/",(req,res)=>{
-    res.json("Hello");
-}
-)
+
 
 app.listen(process.env.PORT,()=>{
     console.log("server is running")

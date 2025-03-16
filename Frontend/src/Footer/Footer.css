@@ -24,3 +24,10 @@
  
   --text-light: #D8F3DC;
 }
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px;
+  }
+}

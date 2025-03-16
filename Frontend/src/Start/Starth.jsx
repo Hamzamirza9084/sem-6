@@ -5,10 +5,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Start.css';
 import AppFooter from '../Footer/Footer';
-import Headerf from '../Header/Headerf';
+import Headerh from '../Header/Headerh';
 
 
-function Start() {
+function Starth() {
     const [subject, setSubject] = useState('');
     const [raspberryPiIp, setRaspberryPiIp] = useState('192.168.92.8');  
     const [loading, setLoading] = useState(false);
@@ -62,7 +62,7 @@ function Start() {
 
     return (
         <>
-        <Headerf/>
+        <Headerh/>
         <div className="containerr">
             <h1 id="h1s">Click Button to Start Attendance</h1>
             <input
@@ -83,4 +83,4 @@ function Start() {
     );
 }
 
-export default Start;
+export default Starth;

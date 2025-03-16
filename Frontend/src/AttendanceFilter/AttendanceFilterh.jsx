@@ -3,10 +3,10 @@ import axios from "axios";
 import { FaSearch } from "react-icons/fa";
 import { gsap } from "gsap";
 import "./AttendanceFilter.css";
-import  Headerf from '../Header/Headerf.jsx'
+import  Headerh from '../Header/Headerh.jsx'
 import Footer from '../Footer/Footer.jsx'
 
-const AttendanceFilter = () => {
+const AttendanceFilterh = () => {
   const [UID, setUID] = useState("");
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("");
@@ -41,7 +41,7 @@ const AttendanceFilter = () => {
 
   return (
     <>
-    <Headerf/>
+    <Headerh/>
     <div id="smain">
     <div className="attendance-container">
       <div className="search-bar">
@@ -99,4 +99,4 @@ const AttendanceFilter = () => {
   );
 };
 
-export default AttendanceFilter;
+export default AttendanceFilterh;
