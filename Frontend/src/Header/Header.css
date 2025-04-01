@@ -7,13 +7,24 @@
     font-style: normal;
   }
   
-  :root {
+  
+
+  [data-theme="dark"] {
     --primary: #255F38;
     --secondary: #1F7D53;
     --background: #18230F;
     --accent: #27391C;
     --text-light: #FFFFFF;
   }
+  
+  [data-theme="light"] {
+    --primary: #ffffff;
+    --secondary: #f1f1f1;
+    --background: #e0e0e0;
+    --accent: #d0d0d0;
+    --text-light: #000000;
+  }
+
   
   #head {
     display: flex;
@@ -159,4 +170,6 @@
       transform: translateX(-50%);
     }
   }
+
+
   

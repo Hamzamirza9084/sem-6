@@ -1,11 +1,27 @@
-:root {
-    --primary: #1F7D53;
-    --secondary: #255F38;
-    --dark: #27391C;
-    --darker: #18230F;
-    --text-light: #ffffff;
-  }
-  
+[data-theme="dark"] {
+  --primary: rgba(37, 95, 56, 0.9); 
+  --secondary: rgba(31, 125, 83, 0.8); 
+  --background: #121212; 
+  --accent: rgba(39, 57, 28, 0.6);
+  --text-light: #FFFFFF;
+  --border-color: #1f7d53;
+  --op:rgba(31, 125, 83, 0.2);
+  --dark:#27391c;
+  --darker:#18230f;
+}
+
+[data-theme="light"] {
+  --primary: rgba(255, 255, 255, 0.6);
+  --secondary: rgba(240, 240, 240, 0.7);
+  --background: #f8f9fa;
+  --accent: rgba(200, 200, 200, 0.5);
+  --text-light: #333;
+  --border-color: #000000;
+  --op:rgba(0, 0, 0, 0.2);
+  --dark:rgba(240, 240, 240, 0.7);
+  --darker:#ffffff;
+}
+
   body {
     font-family: monospace;
   }
@@ -88,14 +104,18 @@
   
   .attendance-table tbody tr:nth-child(even) {
     background-color: var(--darker);
+    color: var(--text-light);
   }
   
   #smain
   {
+    background-color: var(--primary);
     min-height: 400px;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
+
   @media only screen and (max-width: 768px) {
     .attendance-container {
       width: 95%;

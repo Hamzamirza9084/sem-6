@@ -5,8 +5,10 @@ import { gsap } from "gsap";
 import "../AttendanceFilter/AttendanceFilter.css";
 import Headers from "../Header/Headers.jsx";
 import Footer from "../Footer/Footer.jsx";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 const Studentfilter = () => {
+  const { isDark } = useDarkMode();
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
@@ -72,12 +74,12 @@ const Studentfilter = () => {
   return (
     <>
       <Headers />
-      <div id="smain">
+      <div id="smain" data-theme={isDark ? "dark" : "light"}>
         <div className="attendance-container">
           <div className="search-bar">
             <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
-            <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
-            <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
+            {/* <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
+            <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} /> */}
             <button className="search-btn" onClick={fetchAttendance}>
               <FaSearch /> Search
             </button>

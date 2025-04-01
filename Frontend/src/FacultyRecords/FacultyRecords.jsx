@@ -4,8 +4,10 @@ import { FaUserTie } from "react-icons/fa";
 import gsap from "gsap";
 import "./FacultyRecords.css";
 import Headerh from "../Header/Headerh";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 const FacultyRecords = () => {
+  const { isDark } = useDarkMode();
   const [facultyData, setFacultyData] = useState({});
   const [filteredData, setFilteredData] = useState({});
   const [loading, setLoading] = useState(true);
@@ -92,7 +94,8 @@ const FacultyRecords = () => {
   return (
     <>
     <Headerh/>
-    <div ref={containerRef} className="faculty-container">
+    <div className="pr" data-theme={isDark ? "dark" : "light"}>
+    <div ref={containerRef} className="faculty-container" >
       <h2 className="faculty-title">Faculty Records</h2>
       <div className="filters">
         <input
@@ -163,7 +166,8 @@ const FacultyRecords = () => {
           </div>
         ))
       )}
-      
+    
+    </div>
     </div>
     </>
   );

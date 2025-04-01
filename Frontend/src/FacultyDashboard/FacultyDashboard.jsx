@@ -5,8 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./FacultyDashboard.css";
 import Headerf from "../Header/Headerf";
 import Footer from '../Footer/Footer.jsx'
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 const FacultyDashboard = () => {
+  const { isDark } = useDarkMode();
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [error, setError] = useState("");
@@ -108,7 +110,8 @@ const FacultyDashboard = () => {
   return (
     <>
     <Headerf/>
-    <div className="faculty-container">
+    <div className="pr" data-theme={isDark ? "dark" : "light"}>
+    <div className="faculty-container" >
       <h2 className="faculty-header">Faculty Dashboard</h2>
 
       <div className="search-bar-container mb-4">
@@ -172,6 +175,7 @@ const FacultyDashboard = () => {
       ) : (
         <p className="text-gray-500 mt-2">No data available</p>
       )}
+    </div>
     </div>
     <Footer/>
     </>

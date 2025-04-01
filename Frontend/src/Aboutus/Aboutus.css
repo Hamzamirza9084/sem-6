@@ -1,6 +1,24 @@
+[data-theme="dark"] {
+    --primary: rgba(37, 95, 56, 0.9); 
+    --secondary: rgba(31, 125, 83, 0.8); 
+    --background: #121212; 
+    --accent: rgba(39, 57, 28, 0.6);
+    --text-light: #FFFFFF;
+  }
+  
+  [data-theme="light"] {
+    --primary: rgba(255, 255, 255, 0.6);
+    --secondary: rgba(240, 240, 240, 0.7);
+    --background: #f8f9fa;
+    --accent: rgba(200, 200, 200, 0.5);
+    --text-light: #333;
+  }
+  
+  
+
 
 .aboutus-container {
-    background: #27391C;
+    background: var(--secondary);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 50px;
@@ -36,6 +54,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
   }
   
 h1 {
@@ -53,7 +72,7 @@ h1 {
 
 .aboutus-text {
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--text-light);
     margin-bottom: 25px;
     line-height: 1.7;
     font-family: 'Arial', sans-serif;
@@ -70,7 +89,7 @@ h1 {
 
 .features-list li {
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--text-light);
     padding: 12px 15px;
     border-radius: 8px;
     background: rgba(28, 28, 28, 0.2);

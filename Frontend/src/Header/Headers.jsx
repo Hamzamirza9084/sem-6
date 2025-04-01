@@ -8,8 +8,11 @@ import { IoLogOutSharp } from "react-icons/io5";
 import { IoHome } from "react-icons/io5";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
+import { Btn } from "../Btn/Btn";
 
 function Headers() {
+    const { isDark, setIsDark } = useDarkMode();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
@@ -43,7 +46,7 @@ function Headers() {
     }, [navigate]);
 
     return (
-        <header id="head">
+        <header id="head" data-theme={isDark ? "dark" : "light"}>
             <div id="landh5">
                 <img id="logo" src={logo} alt="IntellClass Logo" />
                 <h2>IntellClass</h2>
@@ -66,6 +69,8 @@ function Headers() {
             <div className="auth-status">
                 {loading ? <p>Loading...</p> : user ? <h4>Welcome, {user}</h4> : <p>Not authenticated</p>}
             </div>
+            <Btn isChecked={isDark} onClick={()=> setIsDark(!isDark)}/> 
+
         </header>
     );
 }

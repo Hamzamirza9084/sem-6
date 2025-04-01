@@ -1,4 +1,5 @@
 import {createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { DarkModeProvider } from './Header/DarkModeContext.jsx'
 import LandingPage from './Land/LandingPage'
 import RegisterF from './RegisterF/RegisterF'
 import RegisterHOD from './RegisterHOD/RegisterHOD'
@@ -24,7 +25,10 @@ import Homeh from './Home/Homeh.jsx'
 import FacultyDashboardh from './FacultyDashboard/FacultyDashboardh.jsx'
 
 
+
 function App() {
+  
+
  const router=createBrowserRouter([
   {
     path:'/',
@@ -127,7 +131,9 @@ function App() {
  ])
   return (
   <>
-  <RouterProvider router={router} />
+  <DarkModeProvider>
+      <RouterProvider router={router} />
+  </DarkModeProvider>
   </>
   )
 }

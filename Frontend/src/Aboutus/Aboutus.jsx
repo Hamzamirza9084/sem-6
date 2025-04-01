@@ -3,12 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Aboutus.css";
 import Headerr from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 const Aboutus = () => {
+  const { isDark } = useDarkMode();
   return (
     <>
     <Headerr/>
-    <div className="aboutus-bg">
+    <div className="aboutus-bg" data-theme={isDark ? "dark" : "light"}>
       <div className="aboutus-container">
         <h1>About us</h1>
         <p className="aboutus-text">

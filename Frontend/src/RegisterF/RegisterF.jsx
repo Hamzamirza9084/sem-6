@@ -5,8 +5,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'; 
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
+
 
 const RegisterF = () => {
+  const { isDark } = useDarkMode();
  const [name,setName]= useState();
    const [email,setEmail]= useState();
    const [password,setPassword]= useState();
@@ -108,7 +111,7 @@ const RegisterF = () => {
 
   return (
     <><ToastContainer />
-    <div className="faculty-dark-background">
+    <div className="faculty-dark-background" data-theme={isDark ? "dark" : "light"}>
       <div className="faculty-register-container">
         
         <h2 className="f">Register (faculty)</h2>

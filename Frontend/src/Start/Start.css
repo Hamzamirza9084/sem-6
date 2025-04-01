@@ -1,7 +1,28 @@
+[data-theme="dark"] {
+  --primary: rgba(37, 95, 56, 0.9); 
+  --secondary: rgba(31, 125, 83, 0.8); 
+  --background: #121212; 
+  --accent: rgba(39, 57, 28, 0.6);
+  --text-light: #FFFFFF;
+  --border-color: #1f7d53;
+  --op:rgba(31, 125, 83, 0.2)
+}
+
+[data-theme="light"] {
+  --primary: rgba(255, 255, 255, 0.6);
+  --secondary: rgba(240, 240, 240, 0.7);
+  --background: #f8f9fa;
+  --accent: rgba(200, 200, 200, 0.5);
+  --text-light: #333;
+  --border-color: #000000;
+  --op:rgba(0, 0, 0, 0.2)
+}
+
+
 
 .containerr {
     text-align: center;
-    background-color: #27391C;
+    background-color: var(--secondary);
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
@@ -13,7 +34,7 @@
 }
 
 #h1s {
-    color: #ffffff;
+    color: var(--text-light);
     
 }
 
@@ -28,8 +49,8 @@
 }
 
 .start-button {
-    background-color: #1F7D53;
-    color: white;
+    background-color: var(--accent);
+    color: var(--text-light);
     padding: 10px 20px;
     border: none;
     cursor: pointer;

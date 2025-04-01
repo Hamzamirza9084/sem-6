@@ -2,9 +2,13 @@ import React from "react";
 import Footer from 'rc-footer';
 import 'rc-footer/assets/index.css';
 import "./Footer.css";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
+
 const AppFooter = () => {
+  const { isDark } = useDarkMode();
   return (
     <Footer
+    data-theme={isDark ? "dark" : "light"}
     style={{ backgroundColor: "var(--primary)", color: "var(--text-light)" }}
       columns={[
         {

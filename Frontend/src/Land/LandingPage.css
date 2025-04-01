@@ -1,4 +1,32 @@
+[data-theme="dark"] {
+  --primary: rgba(37, 95, 56, 0.9); 
+  --secondary: rgba(31, 125, 83, 0.8); 
+  --background: #121212; 
+  --accent: rgba(39, 57, 28, 0.6);
+  --text-light: #FFFFFF;
+  --bg:rgba(0, 0, 0, 0.6)
+}
 
+[data-theme="light"] {
+  --primary: rgba(255, 255, 255, 0.6);
+  --secondary: rgba(240, 240, 240, 0.7);
+  --background: #f8f9fa;
+  --accent: rgba(200, 200, 200, 0.5);
+  --text-light: #333;
+  --bg:rgba(161, 161, 161, 0.3)
+}
+
+
+#land-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: linear-gradient(to bottom, var(--primary), var(--secondary));
+  }
+  
 .land-container {
   position: fixed; 
   top: 0;
@@ -17,7 +45,7 @@
 
 
 .hero-content {
-  background: rgba(0, 0, 0, 0.6);
+ 
   padding: 30px;
   border-radius: 10px;
   text-align: center;
@@ -26,6 +54,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--text-light);
 }
 
 
@@ -34,7 +63,7 @@
 .cta-container {
   padding: 60px 20px;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.3); 
+ 
   color: var(--text-light);
   display: flex;
   flex-direction: column;
@@ -81,3 +110,5 @@
     padding: 10px 20px;
   }
 }
+
+

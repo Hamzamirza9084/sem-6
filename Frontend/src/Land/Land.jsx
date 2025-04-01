@@ -3,11 +3,13 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useRef, useEffect, useState } from "react";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import "./Land.css";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 function Model({ modelPath }) {
   const { scene } = useGLTF(modelPath);
   const modelRef = useRef();
   const [scrollY, setScrollY] = useState(0);
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,8 +31,9 @@ function Model({ modelPath }) {
 }
 
 function Land() {
+  const { isDark } = useDarkMode();
   return (
-    <div id="land-background">
+    <div id="land-background" data-theme={isDark ? "dark" : "light"}>
       <Canvas camera={{ position: [0, 0, 5] }}>
         <ambientLight intensity={1} />
         <directionalLight position={[1, 1, 1]} intensity={0.5} />

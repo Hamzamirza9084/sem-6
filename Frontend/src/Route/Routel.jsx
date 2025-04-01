@@ -2,6 +2,7 @@ import "./Route.css";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUserGraduate, FaChalkboardTeacher, FaUserTie, FaUser } from "react-icons/fa";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 const roles = [
   { name: "Student", icon: <FaUserGraduate />, path: "/logins" },
@@ -11,6 +12,7 @@ const roles = [
 ];
 
 function Routel() {
+  const { isDark } = useDarkMode();
   const [selectedRole, setSelectedRole] = useState(null);
   const navigate = useNavigate();
 
@@ -22,7 +24,7 @@ function Routel() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
+    <div className="d-flex justify-content-center align-items-center vh-100" id="claabro" data-theme={isDark ? "dark" : "light"}>
       <div className="container-box">
       <h2>Login</h2>
         <h3 className="mb-3">Please select your role</h3>

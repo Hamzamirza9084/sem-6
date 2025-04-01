@@ -5,8 +5,10 @@ import { gsap } from "gsap";
 import "./AttendanceFilter.css";
 import  Headerf from '../Header/Headerf.jsx'
 import Footer from '../Footer/Footer.jsx'
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 const AttendanceFilter = () => {
+  const { isDark } = useDarkMode();
   const [UID, setUID] = useState("");
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("");
@@ -42,7 +44,7 @@ const AttendanceFilter = () => {
   return (
     <>
     <Headerf/>
-    <div id="smain">
+    <div id="smain" data-theme={isDark ? "dark" : "light"}>
     <div className="attendance-container">
       <div className="search-bar">
         <input
@@ -52,8 +54,8 @@ const AttendanceFilter = () => {
           onChange={(e) => setUID(e.target.value)}
         />
         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
-        <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
-        <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
+        {/* <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
+        <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} /> */}
         <button className="search-btn" onClick={fetchAttendance}>
           <FaSearch /> Search
         </button>

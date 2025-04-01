@@ -1,13 +1,36 @@
-:root {
-    --primary: #255F38;
-    --secondary: #1F7D53;
-    --background: #18230F;
-    --accen: #27391C;
+
+  
+  [data-theme="dark"] {
+    --primary: rgba(37, 95, 56, 0.9); 
+    --secondary: rgba(31, 125, 83, 0.8); 
+    --background: #121212; 
+    --accent: rgba(39, 57, 28, 0.6);
     --text-light: #FFFFFF;
-    --border-color: #1F2D16;
-    --selected-color: #1F7D53;
+    --border-color: #1f7d53;
+    --op:rgba(31, 125, 83, 0.2)
   }
   
+  [data-theme="light"] {
+    --primary: rgba(255, 255, 255, 0.6);
+    --secondary: rgba(240, 240, 240, 0.7);
+    --background: #f8f9fa;
+    --accent: rgba(200, 200, 200, 0.5);
+    --text-light: #333;
+    --border-color: #000000;
+    --op:rgba(0, 0, 0, 0.2)
+  }
+  
+  .mb-3
+  {
+    color: var(--text-light);
+  }
+  
+#claabro
+{
+  background-color: var(--primary);
+}
+    
+
   body {
     background-color: var(--background);
     font-family: monospace;
@@ -16,7 +39,7 @@
   
   .container-box {
     max-width: 500px;
-    background: var(--accen);
+    background: var(--secondary);
     border-radius: 20px;
     padding: 30px;
     text-align: center;
@@ -40,7 +63,7 @@
   
   .role-card.selected {
     border-color: var(--selected-color);
-    background: rgba(31, 125, 83, 0.2);
+    background: var(--op);
   }
   
   .role-icon {
@@ -93,7 +116,7 @@
 
   #linkbro
   {
-    color: #FFFFFF;
+    color: var(--text-light);
   }
 
   @media (max-width: 768px) {

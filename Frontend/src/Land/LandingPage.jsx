@@ -5,20 +5,22 @@ import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { BiUser, BiPhone, BiShield, BiBell, BiCodeBlock, BiChip, BiRocket } from "react-icons/bi"; 
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 function LandingPage() {
   const navigate = useNavigate();
+  const { isDark } = useDarkMode();
 
   return (
     <>
       <Header />
 
  
-      <div className="land-container">
+      <div className="land-container" data-theme={isDark ? "dark" : "light"}>
         <Land />
       </div>
 
-      <div className="content-wrapper">
+      <div className="content-wrapper" data-theme={isDark ? "dark" : "light"}>
         <Container className="hero-content text-center text-light">
           <h1 className="fw-bold">Welcome to IntellClass System</h1>
           <p className="fs-4">Smart, Secure, and Efficient Classroom Management</p>

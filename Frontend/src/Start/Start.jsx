@@ -6,9 +6,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Start.css';
 import AppFooter from '../Footer/Footer';
 import Headerf from '../Header/Headerf';
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 
 function Start() {
+    const { isDark } = useDarkMode();
     const [subject, setSubject] = useState('');
     const [raspberryPiIp, setRaspberryPiIp] = useState('192.168.92.8');  
     const [loading, setLoading] = useState(false);
@@ -63,7 +65,8 @@ function Start() {
     return (
         <>
         <Headerf/>
-        <div className="containerr">
+    
+        <div className="containerr" data-theme={isDark ? "dark" : "light"}>
             <h1 id="h1s">Click Button to Start Attendance</h1>
             <input
                 type="text"

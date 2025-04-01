@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import { FaUserGraduate, FaChalkboardTeacher, FaUserTie, FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { useDarkMode } from "../Header/DarkModeContext.jsx";
 
 const roles = [
   { name: "Student", icon: <FaUserGraduate />, path: "/regst" },
@@ -11,6 +12,7 @@ const roles = [
 ];
 
 function Route() {
+  const { isDark } = useDarkMode();
   const [selectedRole, setSelectedRole] = useState(null);
   const navigate = useNavigate();
 
@@ -22,7 +24,7 @@ function Route() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
+    <div className="d-flex justify-content-center align-items-center vh-100" id="claabro" data-theme={isDark ? "dark" : "light"}>
       <div className="container-box">
         <h2>Sign Up</h2>
         <h3 className="mb-3">Please select your role</h3>

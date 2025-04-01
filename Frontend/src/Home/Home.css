@@ -1,0 +1,29 @@
+[data-theme="dark"] {
+    --primary: rgba(37, 95, 56, 0.9); 
+    --secondary: rgba(31, 125, 83, 0.8); 
+    --background: #121212; 
+    --accent: rgba(39, 57, 28, 0.6);
+    --text-light: #FFFFFF;
+    --border-color: #1f7d53;
+    --op:rgba(31, 125, 83, 0.2)
+  }
+  
+  [data-theme="light"] {
+    --primary: rgba(255, 255, 255, 0.6);
+    --secondary: rgba(240, 240, 240, 0.7);
+    --background: #f8f9fa;
+    --accent: rgba(200, 200, 200, 0.5);
+    --text-light: #333;
+    --border-color: #000000;
+    --op:rgba(0, 0, 0, 0.2)
+  }
+
+ #h1home,p
+  {
+    color: #f8f9fa;
+  }
+
+  #btnhome
+  {
+    background-color: var(--primary);
+  }

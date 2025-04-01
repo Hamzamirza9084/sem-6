@@ -1,10 +1,30 @@
+[data-theme="dark"] {
+  --primary: rgba(37, 95, 56, 0.9); 
+  --secondary: rgba(31, 125, 83, 0.8); 
+  --background: #121212; 
+  --accent: rgba(39, 57, 28, 0.6);
+  --text-light: #FFFFFF;
+  --border-color: #1f7d53;
+  --op:rgba(31, 125, 83, 0.2)
+}
+
+[data-theme="light"] {
+  --primary: rgba(255, 255, 255, 0.6);
+  --secondary: rgba(240, 240, 240, 0.7);
+  --background: #f8f9fa;
+  --accent: rgba(200, 200, 200, 0.5);
+  --text-light: #333;
+  --border-color: #000000;
+  --op:rgba(0, 0, 0, 0.2)
+}
+
 
 .hod-dark-background {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 90px 90px;
-  background: #18230F;
+  background: var(--primary);
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -21,7 +41,7 @@
 }
 
 .hod-register-container {
-  background: #27391C;
+  background: var(--secondary);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
@@ -38,7 +58,7 @@
 
 .h{
   font-size: 2.1rem;
-  color: #d9d9d9;
+  color: var(--text-light);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -55,7 +75,7 @@
 .hod-form-label {
   font-size: 16px;
   font-weight: 600;
-  color:#d9d9d9;
+  color:var(--text-light);
   margin-bottom: 8px;
   display: block;
 }
